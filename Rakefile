@@ -16,3 +16,7 @@ task :travis do
 end
 
 task :default => 'travis'
+
+task :docs do
+  puts `docco src/*.js`
+end
