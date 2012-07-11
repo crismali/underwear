@@ -50,7 +50,7 @@ QUnit tests to Jasmine specs and making all the tests pass.
 ##Utilities
 
 ###identity
-(not yey implemented)
+(not yet implemented)
 
 ###escape
 (not yet implemented)
