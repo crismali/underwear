@@ -23,26 +23,41 @@
             </header>
 
             <p>
-                Underwear translates all the Underscore methods to the native JavaScript prototypes. For those of us who prefer this:
+                Underscore.js is a great library, but I prefer to extend the native prototypes with these methods. With Underwear.js, you can use the greatness of underscore.js from the comfort of your own objects.
             </p>
-            
-            {% highlight js linenos %}
-                [1, 2, 3].each(function(n) { alert(n); });
-            {% endhighlight %}
 
             <p>
-                Those of us who don't mind extending the native prototypes prefer this to the somewhat clunky Underscore methods.
+                Underwear translates all the Underscore methods to the native JavaScript prototypes. For those who prefer not to see skid marks in their code ;)
+            </p>
+            
+            <p>
+                <strong>With Underwear you can do this:</strong>
+            </p>
+            <p>
+                <code>
+                    [1, 2, 3].each(function(n) { alert(n); });
+                </code>
             </p>
 
-            {% highlight js %}
-                _([1, 2, 3]).each(function(n) {
-                    console.log(n);
-                });
+            <p>
+                <strong>Instead of this:</strong>
+            </p>
+            
+            <p>
+                <code>
+                    _([1, 2, 3]).each(function(n) { alert(n); });
+                </code>
+            </p>
 
-                _.each([1, 2, 3], function() {
-                    console.log(n);
-                });
-            {% endhighlight %}
+            <p>
+                <strong style="margin: 0 1em;">Or this:</strong>
+            </p>
+
+            <p>
+                <code>
+                    _.each([1, 2, 3], function(n) { alert(n); });
+                </code> 
+            </p>
 
             <section class="downloads" class="clearfix">
                 <h2>Put on some underwear</h2>
@@ -56,18 +71,13 @@
             <hr>
 
             <section id="main_content">
-                <h3>Underwear.js.</h3>
-
-                <p>
-                    Underscore.js is a great library, but some prefer to extend the native prototypes with these types of methods. With Underwear.js, you can use the awesomeness of underscore from the comfort of your own objects.
-                </p>
-
-                <p>
-                    Underwear translates all the underscore methods to native prototype extensions for those who prefer not to see skid marks in their code ;)
-                </p>
-
+                
                 <p>
                     <a href="docs/underwear.html">Source Documentation</a>
+                </p>
+
+                <p>
+                    <em>Sorry, real documentation coming soon...</em>
                 </p>
 
             </section>
@@ -80,5 +90,19 @@
 
         </div>
     </div>
+
+    <script type="text/javascript">
+        var _gauges = _gauges || [];
+        (function() {
+            var t   = document.createElement('script');
+            t.type  = 'text/javascript';
+            t.async = true;
+            t.id    = 'gauges-tracker';
+            t.setAttribute('data-site-id', '50038276613f5d51c40000ae');
+            t.src = '//secure.gaug.es/track.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(t, s);
+        })();
+    </script>
 </body>
 </html>
