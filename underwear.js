@@ -1043,6 +1043,7 @@ if (typeof Object.prototype.functions === "undefined") {
                                  'forEach',
                                  'foldr',
                                  'groupBy',
+                                 'has',
                                  'include',
                                  'inject',
                                  'invoke',
@@ -1050,6 +1051,7 @@ if (typeof Object.prototype.functions === "undefined") {
                                  'keys',
                                  'map',
                                  'max',
+                                 'methods',
                                  'min',
                                  'pick',
                                  'pluck',
@@ -1069,6 +1071,10 @@ if (typeof Object.prototype.functions === "undefined") {
     };
 
     Function.prototype.functions = Object.prototype.functions;
+}
+
+if (typeof Object.prototype.methods === "undefined") {
+    Object.prototype.methods = Object.prototype.functions;
 }
 
 if (typeof Object.prototype.extend === "undefined") {
@@ -1095,6 +1101,13 @@ if (typeof Object.prototype.defaults === "undefined") {
 if (typeof Object.prototype.clone === "undefined") {
     Object.prototype.clone = function() {
         return _.clone(this);
+    };
+}
+
+if (typeof Object.prototype.has === "undefined") {
+    Object.prototype.has = function() {
+        var args = argsWithThis.call(this, arguments);
+        return _.has.apply(this, args);
     };
 }
 if (typeof Array.prototype.each === "undefined") {
