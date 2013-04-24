@@ -1,3 +1,4 @@
+
 function isTypeOf(constructor, suspect) {
   return suspect.constructor == constructor;
 }
@@ -66,27 +67,25 @@ function isNotTypeOf(constructor, suspect) {
   if (!Array.range) {
     Array.range = function() {
       return _.range.apply([], arguments);
-    }
+    };
   }
 
-  var nativeMethods = [
-    {
-        func: Array.prototype.forEach,
-        alias: 'each'
-    }
-  ];
+  var nativeMethods = [{
+    func: Array.prototype.forEach,
+    alias: 'each'
+  }];
 
   _.each(nativeMethods, function(nativeMethod) {
     if (nativeMethod.func) {
-        Array.prototype[nativeMethod.alias] = nativeMethod.func;
+      Array.prototype[nativeMethod.alias] = nativeMethod.func;
     }
   });
 
 
   if (typeof Array.prototype.isEmpty === "undefined") {
-      Array.prototype.isEmpty = function() {
-          return _.isEmpty.call(this, this);
-      };
+    Array.prototype.isEmpty = function() {
+        return _.isEmpty.call(this, this);
+    };
   }
 
 })();
