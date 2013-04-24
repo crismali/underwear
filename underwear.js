@@ -1,4 +1,3 @@
-
 function isTypeOf(constructor, suspect) {
   return suspect.constructor == constructor;
 }
