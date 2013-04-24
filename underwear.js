@@ -88,6 +88,12 @@ function isNotTypeOf(constructor, suspect) {
     };
   }
 
+  if (typeof Array.prototype.isNotEmpty === "undefined") {
+    Array.prototype.isNotEmpty = function() {
+        return !_.isEmpty.call(this, this);
+    };
+  }
+
 })();
 (function() {
 
